@@ -1,0 +1,51 @@
+@import "../../bower_components/bootstrap/less/bootstrap.less";
+
+@white: #fff;
+@darkBlue: #364659;
+@blue: #4C5B72;
+@darkwine: #A64149;
+@grape: #ef3e36;
+@indiBgcolor: #F2EFEB;
+@red: #E7271C;
+@orange: #F18C24;
+
+li{list-style: none;}
+hr{border-color: @blue;}
+.required{color: @red;}
+.nextBtn{background: @darkBlue; color: @white;}
+
+.header{
+  height: 60px; background: @darkBlue;
+  #logo{font-size: 45px; color: @white; height: 60px;}
+}
+.mainBox{
+  #bookMenu{
+    margin-top: 2%;
+    li{a{color: @blue;}}
+  }
+  #bookContents{
+    margin-top: 2%;
+    #roomBox{
+      #roomInfo{
+        background: @indiBgcolor;
+        height: 500px;
+        #roomImg{
+          width: 100%;
+          height: 250px;
+          background: url('/static/image/roomEx.jpg') no-repeat center center;
+          h3{color: @blue;}
+        }
+        #bookRoom{
+          margin: 5%;
+        }
+      }
+    }
+  }
+  #bookForm{
+    div{margin-top: 2%;}
+    #bookalert{
+      background: @indiBgcolor;
+      height: auto;
+    }
+  }
+}

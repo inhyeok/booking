@@ -1,0 +1,80 @@
+extends layout
+
+block content
+  .header
+    #logo.col-md-3 Example Test
+  .mainBox
+    #bookMenu.text-center
+      ul.nav.nav-tabs
+        li(role="presentation").col-md-3.col-xs-12
+          a(href="#")
+              span 1. 객실선택
+        li(role="presentation").active.col-md-3.col-xs-12
+          a(href="#")
+              span 2. 예약정보 입력
+        li(role="presentation").disabled.col-md-3.col-xs-12
+          a(href="#")
+              span 3. 결제
+        li(role="presentation").disabled.col-md-3.col-xs-12
+          a(href="#")
+              span 4. 완료
+
+    #bookContents
+      #roomBox.col-md-4
+        #roomInfo
+          #roomImg
+            .col-md-12
+              h3 Double / 2개
+          #bookRoom
+            #bookInfo.col-md-12.col-sm-6.col-xs-5
+              .row
+                .col-md-5
+                  label 체크인
+                .col-md-7
+                  p 2015-10-11
+              .row
+                .col-md-5
+                  label 체크아웃
+                .col-md-7
+                  p 2015-10-29
+              .row
+                .col-md-5
+                  label 인원
+                .col-md-7
+                  p 3명
+            #bookAmount.col-md-12.col-sm-6.col-xs-7
+              hr
+              label 가격
+              p 30000원 X 2개
+              h2.required 총 60000원
+      #bookForm.col-md-8
+        form.from-horizontal
+          .form-group
+            .col-md-6
+              label 성함
+              span.required  *
+              input.form-control(type="text" name="name" id="name" placeholder="성함을 입력해주세요.")
+            .col-md-6
+              label 연락처
+              span.required  *
+              input.form-control(type="text" name="phoneNum" id="phoneNum" placeholder="연락처를 입력해주세요.")
+            .col-md-12
+              label 이메일
+              span.required  *
+              input.form-control(type="email" name="email" id="email" placeholder="이메일을 입력해주세요.")
+            .col-md-12
+              label 예약 메모
+              textarea.form-control(type="text" name="memo" id="memo" placeholder="메모를 입력해주세요. (ex. 저녁에 고기를 구워먹을 수 있게 준비해주세요.)")
+            .col-md-12
+              #bookalert
+                pre(style='white-space: pre; word-break: inherit;').
+                  <예약관련 문의: 9AM ~ 11PM>
+                  Tel: 010-5762-7627
+                  KAKAO TALK ID : midohostel
+                  E-MAIL : midohostel@gmail.com
+                  입금계좌: 국민은행 9-2566-4761-48
+                  예금주: 윤덕진(미도호스텔)
+                  *예약완료 후 24시간 이내에 입금하셔야 예약이 확정됩니다.
+                  *당일 예약의 경우 전화주세요.
+            .col-md-2.col-md-offset-10
+              button(type="submit").btn.nextBtn 다음:결제하기
