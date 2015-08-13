@@ -6773,12 +6773,12 @@ hr {
   color: #e7271c;
 }
 .nextBtn {
-  background: #364659;
+  background: #353d44;
   color: #ffffff;
 }
 .header {
   height: 60px;
-  background: #364659;
+  background: #353d44;
 }
 .header #logo {
   font-size: 45px;
@@ -6795,7 +6795,7 @@ hr {
   margin-top: 2%;
 }
 .mainBox #bookContents #roomBox #roomInfo {
-  background: #f2efeb;
+  background: #ececec;
   height: 500px;
 }
 .mainBox #bookContents #roomBox #roomInfo #roomImg {
@@ -6809,10 +6809,13 @@ hr {
 .mainBox #bookContents #roomBox #roomInfo #bookRoom {
   margin: 5%;
 }
+.mainBox #bookContents #roomBox #roomInfo #bookRoom #date {
+  margin-bottom: 3%;
+}
 .mainBox #bookForm div {
   margin-top: 2%;
 }
 .mainBox #bookForm #bookalert {
-  background: #f2efeb;
+  background: #ececec;
   height: auto;
 }
