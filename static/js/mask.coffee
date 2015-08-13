@@ -1,3 +1,3 @@
 $(document).ready( () ->
-  $('input[name=phoneNum]').inputmask('999-9999-9999')
+  $('input[name=phone]').inputmask('999-9999-9999')
 )
