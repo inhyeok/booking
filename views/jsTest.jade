@@ -1,9 +1,28 @@
 extends layout
 
 block content
-  .row
-    canvas#canvas(height="400px", width="600px")
+  center
+    .row
+      canvas#canvas(height="400px", width="600px")
+    .row
+      #time
+    .row
+      button.btn(onclick="message()") clickMe
   script.
+    NProgress.start();  //NProgress.set(0.0);
+    NProgress.set(0.4);
+    NProgress.done(); //NProgress.set(1.0);
+    //NProgress.inc(0.3);
+    //NProgress.configure({ speed: 100 });
+
+    $('#time').append(moment().format('YYYY-MM-DD hh:mm:ss a'));
+
+    var message = function() {
+      Messenger().post({
+        message: "Hello World!!!"
+      })
+    }
+
     var chartlabels = ['dog','cat','aaa','bbb','ccc','ddd'];
     var data1 = [11, 34, 57, 56, 24, 56];
     var data2 = [23, 34, 54, 35, 12, 45];

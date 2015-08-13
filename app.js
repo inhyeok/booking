@@ -15,8 +15,8 @@ app.set('view engine', 'jade');
 app.get('/', function (req, res) {
   res.render('index', { title: 'Booking' });
 });
-app.get('/chart', function (req, res) {
-  res.render('chart', { title: 'Booking' });
+app.get('/jsTest', function (req, res) {
+  res.render('jsTest', { title: 'jsTest' });
 });
 
 server.listen(3000, function() {
