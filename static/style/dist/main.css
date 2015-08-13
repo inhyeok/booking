@@ -6763,6 +6763,9 @@ button.close {
     display: none !important;
   }
 }
+body {
+  font-family: 'NanumGothic', 'Malgun Gothic';
+}
 li {
   list-style: none;
 }
@@ -6773,7 +6776,12 @@ hr {
   color: #e7271c;
 }
 .nextBtn {
-  background: #353d44;
+  background: #4c5b72;
+  color: #ffffff;
+  width: 100%;
+}
+.nextBtn:hover {
+  background: rgba(76, 91, 115, 0.8);
   color: #ffffff;
 }
 .header {
@@ -6796,7 +6804,7 @@ hr {
 }
 .mainBox #bookContents #roomBox #roomInfo {
   background: #ececec;
-  height: 500px;
+  height: auto;
 }
 .mainBox #bookContents #roomBox #roomInfo #roomImg {
   width: 100%;

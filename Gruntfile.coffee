@@ -17,7 +17,7 @@ module.exports = (grunt) ->
         dest: 'static/js/dist/'
         ext: '.js'
     watch:
-      files: ['static/style/*.less','static/js/*.coffe']
+      files: ['static/style/*.less','static/js/*.coffee']
       tasks: ['less','coffee']
 
   grunt.loadNpmTasks 'grunt-contrib-watch'

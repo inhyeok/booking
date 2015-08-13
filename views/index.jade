@@ -24,8 +24,9 @@ block content
         #roomInfo
           #roomImg
             .col-md-12
-              h3 Double / 2개
-          #bookRoom
+              h3
+                strong Double / 2개
+          #bookRoom.row
             #bookInfo.col-md-12.col-sm-6.col-xs-5
               #date.row
                 .col-md-6
@@ -41,27 +42,31 @@ block content
                   p 3명
             #bookAmount.col-md-12.col-sm-6.col-xs-7
               hr
-              label 가격
-              p 30000원 X 2개
-              h2.required 총 60000원
+              .row
+                .col-md-6
+                  label 총금액
+                .col-md-6
+                  p \ 30,000 X 2개
+              h2.required
+                strong \ 60,000
       #bookForm.col-md-8
         form.from-horizontal
           .form-group
-            .col-md-6
-              label 성함
+            #nameInput.col-md-6.col-sm-6
+              label(for="name") 성함
               span.required  *
-              input.form-control(type="text" name="name" id="name" placeholder="성함을 입력해주세요.")
-            .col-md-6
-              label 연락처
+              input.form-control(type="text" name="name" id="name" placeholder="")
+            #phoneInput.col-md-6.col-sm-6
+              label(for="phone") 연락처
               span.required  *
-              input.form-control(type="text" name="phoneNum" id="phoneNum" placeholder="연락처를 입력해주세요.")
-            .col-md-12
-              label 이메일
+              input.form-control(type="text" name="phoneNum" id="phoneNum" placeholder="")
+            #emailInput.col-md-12
+              label(for="email") 이메일
               span.required  *
-              input.form-control(type="email" name="email" id="email" placeholder="이메일을 입력해주세요.")
-            .col-md-12
-              label 예약 메모
-              textarea.form-control(type="text" name="memo" id="memo" placeholder="메모를 입력해주세요. (ex. 저녁에 고기를 구워먹을 수 있게 준비해주세요.)")
+              input.form-control(type="email" name="email" id="email" placeholder="")
+            #memoInput.col-md-12
+              label(for="memo") 예약 메모
+              textarea.form-control(type="text" name="memo" id="memo" placeholder="")
             .col-md-12
               #bookalert
                 pre(style='white-space: pre; word-break: inherit;').
@@ -73,5 +78,5 @@ block content
                   예금주: 윤덕진(미도호스텔)
                   *예약완료 후 24시간 이내에 입금하셔야 예약이 확정됩니다.
                   *당일 예약의 경우 전화주세요.
-            .col-md-2.col-md-offset-10
-              button(type="submit").btn.nextBtn 다음:결제하기
+            .col-md-3.col-md-offset-9
+              input(type="submit" value="다음:결제하기" onclick="confirmForm()").btn.nextBtn
